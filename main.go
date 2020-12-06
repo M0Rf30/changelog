@@ -36,23 +36,23 @@ func main() {
 	app.Version = VERSION
 	app.Usage = "Changelog helper"
 	app.UsageText = "changelog <cmd> <options>"
-	app.Commands = []cli.Command{
+	app.Commands = []*cli.Command{
 		{
 			Name:   "init",
 			Usage:  "Initialize a new changelog file",
 			Action: initChangelog,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "author, a",
 					Value: notAvailable,
 					Usage: "Package author",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "email, e",
 					Value: "",
 					Usage: "Package author email",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "since, s",
 					Value: "",
 					Usage: "Since which tag should the changelog be generated",
@@ -64,12 +64,12 @@ func main() {
 			Usage:  "Prepare next changelog",
 			Action: prepareNext,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "author, a",
 					Value: notAvailable,
 					Usage: "Package author",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "email, e",
 					Value: "",
 					Usage: "Package author email",
@@ -81,7 +81,7 @@ func main() {
 			Usage:  "Show last version",
 			Action: show,
 			Flags: []cli.Flag{
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "guess, g",
 					Usage: "Automatically guess and inject name and user variable from the cwd",
 				},
@@ -92,7 +92,7 @@ func main() {
 			Usage:  "Take pending next changelog, apply a version on it",
 			Action: finalizeNext,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Version revision",
@@ -104,12 +104,12 @@ func main() {
 			Usage:  "Rename a release",
 			Action: rename,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Specify the version to rename",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "to",
 					Value: "",
 					Usage: "The new name of the version",
@@ -127,26 +127,26 @@ func main() {
 			Usage:  "Export the changelog using given template",
 			Action: exportChangelog,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "template, t",
 					Value: "",
 					Usage: "Go template",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Only given version",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "out, o",
 					Value: "-",
 					Usage: "Out target",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "guess, g",
 					Usage: "Automatically guess and inject name and user variable from the cwd",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "vars",
 					Value: "",
 					Usage: "Add more variables to the template",
@@ -158,21 +158,21 @@ func main() {
 			Usage:  "Export the changelog to Markdown format",
 			Action: exportToMd,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Only given version",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "out, o",
 					Value: "-",
 					Usage: "Out target",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "guess, g",
 					Usage: "Automatically guess and inject name and user variable from the cwd",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "vars",
 					Value: "",
 					Usage: "Add more variables to the template",
@@ -184,12 +184,12 @@ func main() {
 			Usage:  "Export the changelog to JSON format",
 			Action: exportToJSON,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Only given version",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "out, o",
 					Value: "-",
 					Usage: "Out target",
@@ -201,21 +201,21 @@ func main() {
 			Usage:  "Export the changelog to Debian format",
 			Action: exportToDebian,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Only given version",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "out, o",
 					Value: "-",
 					Usage: "Out target",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "guess, g",
 					Usage: "Automatically guess and inject name and user variable from the cwd",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "vars",
 					Value: "",
 					Usage: "Add more variables to the template",
@@ -227,21 +227,21 @@ func main() {
 			Usage:  "Export the changelog to RPM format",
 			Action: exportToRpm,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Only given version",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "out, o",
 					Value: "-",
 					Usage: "Out target",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "guess, g",
 					Usage: "Automatically guess and inject name and user variable from the cwd",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "vars",
 					Value: "",
 					Usage: "Add more variables to the template",
@@ -253,21 +253,21 @@ func main() {
 			Usage:  "Export the changelog to CHANGELOG format",
 			Action: exportToChangelog,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Only given version",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "out, o",
 					Value: "-",
 					Usage: "Out target",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "guess, g",
 					Usage: "Automatically guess and inject name and user variable from the cwd",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "vars",
 					Value: "",
 					Usage: "Add more variables to the template",
@@ -279,21 +279,21 @@ func main() {
 			Usage:  "Export the changelog to GHRELEASE format",
 			Action: exportToGHRELEASE,
 			Flags: []cli.Flag{
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "version",
 					Value: "",
 					Usage: "Only given version",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "out, o",
 					Value: "-",
 					Usage: "Out target",
 				},
-				cli.BoolFlag{
+				&cli.BoolFlag{
 					Name:  "guess, g",
 					Usage: "Automatically guess and inject name and user variable from the cwd",
 				},
-				cli.StringFlag{
+				&cli.StringFlag{
 					Name:  "vars",
 					Value: "",
 					Usage: "Add more variables to the template",
@@ -820,7 +820,7 @@ func guessVars(dest map[string]interface{}) error {
 
 func loadChangelog(path string, version string) (*changelog.Changelog, error) {
 	if _, err := os.Stat(path); os.IsNotExist(err) {
-		return nil, fmt.Errorf("Changelog file %q does not exist.", path)
+		return nil, fmt.Errorf("Changelog file %q does not exist", path)
 	}
 
 	clog := &changelog.Changelog{}
