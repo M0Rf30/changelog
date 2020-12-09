@@ -1,4 +1,4 @@
-package: github.com/mh-cbon/changelog
+package: github.com/M0Rf30/changelog
 import:
 - package: github.com/urfave/cli
   version: ^1.17.0

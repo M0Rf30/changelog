@@ -3,7 +3,7 @@ package tpls
 import (
 	"testing"
 
-	"github.com/mh-cbon/changelog/changelog"
+	"github.com/M0Rf30/changelog/changelog"
 )
 
 func TestChangeLogInternalFormat(t *testing.T) {

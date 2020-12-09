@@ -13,8 +13,8 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mh-cbon/changelog/changelog"
-	"github.com/mh-cbon/changelog/tpls"
+	"github.com/M0Rf30/changelog/changelog"
+	"github.com/M0Rf30/changelog/tpls"
 )
 
 type TestingStub struct{}
@@ -224,7 +224,7 @@ func TestChangelog2(t *testing.T) {
 }
 
 func TestInitAnyway(t *testing.T) {
-	// about: https://github.com/mh-cbon/changelog/issues/7
+	// about: https://github.com/M0Rf30/changelog/issues/7
 	tt := &TestingExiter{t}
 
 	dir := "git_test/git"

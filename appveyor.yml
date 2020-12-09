@@ -28,8 +28,8 @@ install:
 
 # build msi artifacts
 build_script:
-  - go test github.com/mh-cbon/changelog/changelog
-  - go test github.com/mh-cbon/changelog/tpls
+  - go test github.com/M0Rf30/changelog/changelog
+  - go test github.com/M0Rf30/changelog/tpls
   - go test
   # x386
   - set GOARCH=386

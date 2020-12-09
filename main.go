@@ -14,8 +14,8 @@ import (
 	"strings"
 
 	"github.com/Masterminds/semver"
-	"github.com/mh-cbon/changelog/changelog"
-	"github.com/mh-cbon/changelog/tpls"
+	"github.com/M0Rf30/changelog/changelog"
+	"github.com/M0Rf30/changelog/tpls"
 	repocommit "github.com/mh-cbon/go-repo-utils/commit"
 	"github.com/mh-cbon/go-repo-utils/repoutils"
 	"github.com/mh-cbon/verbose"

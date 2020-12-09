@@ -1,6 +1,6 @@
 # changelog
 
-[![travis Status](https://travis-ci.org/mh-cbon/changelog.svg?branch=master)](https://travis-ci.org/mh-cbon/changelog)[![Appveyor Status](https://ci.appveyor.com/api/projects/status/github/mh-cbon/changelog?branch=master&svg=true)](https://ci.appveyor.com/project/mh-cbon/changelog)[![GoDoc](https://godoc.org/github.com/mh-cbon/changelog?status.svg)](http://godoc.org/github.com/mh-cbon/changelog)
+[![travis Status](https://travis-ci.org/mh-cbon/changelog.svg?branch=master)](https://travis-ci.org/mh-cbon/changelog)[![Appveyor Status](https://ci.appveyor.com/api/projects/status/github/mh-cbon/changelog?branch=master&svg=true)](https://ci.appveyor.com/project/mh-cbon/changelog)[![GoDoc](https://godoc.org/github.com/M0Rf30/changelog?status.svg)](http://godoc.org/github.com/M0Rf30/changelog)
 
 Maintain a changelog easily.
 
@@ -27,13 +27,13 @@ This tool is part of the [go-github-release workflow](https://github.com/mh-cbon
 
 # Install
 
-Check the [release page](https://github.com/mh-cbon/changelog/releases)!
+Check the [release page](https://github.com/M0Rf30/changelog/releases)!
 
 #### Glide
 ```sh
-mkdir -p $GOPATH/src/github.com/mh-cbon/changelog
-cd $GOPATH/src/github.com/mh-cbon/changelog
-git clone https://github.com/mh-cbon/changelog.git .
+mkdir -p $GOPATH/src/github.com/M0Rf30/changelog
+cd $GOPATH/src/github.com/M0Rf30/changelog
+git clone https://github.com/M0Rf30/changelog.git .
 glide install
 go install
 ```

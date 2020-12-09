@@ -13,7 +13,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Sat 30 Sep 2017 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.29...0.0.30#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.29...0.0.30#diff)
 ______________
 
 ### 0.0.29
@@ -33,7 +33,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 24 Aug 2017 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.28...0.0.29#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.28...0.0.29#diff)
 ______________
 
 ### 0.0.28
@@ -51,7 +51,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Tue 22 Aug 2017 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.27...0.0.28#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.27...0.0.28#diff)
 ______________
 
 ### 0.0.27
@@ -65,7 +65,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Wed 12 Apr 2017 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.26...0.0.27#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.26...0.0.27#diff)
 ______________
 
 ### 0.0.26
@@ -84,7 +84,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Fri 24 Feb 2017 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.25...0.0.26#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.25...0.0.26#diff)
 ______________
 
 ### 0.0.25
@@ -99,7 +99,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Wed 04 Jan 2017 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.24...0.0.25#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.24...0.0.25#diff)
 ______________
 
 ### 0.0.24
@@ -115,7 +115,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Sat 30 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.23...0.0.24#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.23...0.0.24#diff)
 ______________
 
 ### 0.0.23
@@ -129,7 +129,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Sat 30 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.22...0.0.23#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.22...0.0.23#diff)
 ______________
 
 ### 0.0.22
@@ -145,7 +145,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Sat 30 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.21...0.0.22#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.21...0.0.22#diff)
 ______________
 
 ### 0.0.21
@@ -160,7 +160,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Wed 27 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.20...0.0.21#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.20...0.0.21#diff)
 ______________
 
 ### 0.0.20
@@ -178,7 +178,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Tue 26 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.19...0.0.20#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.19...0.0.20#diff)
 ______________
 
 ### 0.0.19
@@ -198,7 +198,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Tue 26 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.18...0.0.19#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.18...0.0.19#diff)
 ______________
 
 ### 0.0.18
@@ -212,7 +212,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.17...0.0.18#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.17...0.0.18#diff)
 ______________
 
 ### 0.0.17
@@ -226,7 +226,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.16...0.0.17#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.16...0.0.17#diff)
 ______________
 
 ### 0.0.16
@@ -240,7 +240,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.15...0.0.16#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.15...0.0.16#diff)
 ______________
 
 ### 0.0.15
@@ -254,7 +254,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.14...0.0.15#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.14...0.0.15#diff)
 ______________
 
 ### 0.0.14
@@ -269,7 +269,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.13...0.0.14#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.13...0.0.14#diff)
 ______________
 
 ### 0.0.13
@@ -283,7 +283,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.12...0.0.13#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.12...0.0.13#diff)
 ______________
 
 ### 0.0.12
@@ -297,7 +297,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.11...0.0.12#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.11...0.0.12#diff)
 ______________
 
 ### 0.0.11
@@ -311,7 +311,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.10...0.0.11#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.10...0.0.11#diff)
 ______________
 
 ### 0.0.10
@@ -331,7 +331,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.9...0.0.10#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.9...0.0.10#diff)
 ______________
 
 ### 0.0.9
@@ -350,7 +350,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Thu 14 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.8...0.0.9#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.8...0.0.9#diff)
 ______________
 
 ### 0.0.8
@@ -366,7 +366,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Tue 12 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.7...0.0.8#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.7...0.0.8#diff)
 ______________
 
 ### 0.0.7
@@ -380,7 +380,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Mon 11 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.6...0.0.7#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.6...0.0.7#diff)
 ______________
 
 ### 0.0.6
@@ -395,7 +395,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Mon 11 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.5...0.0.6#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.5...0.0.6#diff)
 ______________
 
 ### 0.0.5
@@ -411,7 +411,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Mon 11 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.4...0.0.5#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.4...0.0.5#diff)
 ______________
 
 ### 0.0.4
@@ -425,7 +425,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Mon 11 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.3...0.0.4#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.3...0.0.4#diff)
 ______________
 
 ### 0.0.3
@@ -441,7 +441,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Mon 11 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.2...0.0.3#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.2...0.0.3#diff)
 ______________
 
 ### 0.0.2
@@ -455,7 +455,7 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Mon 11 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/0.0.1...0.0.2#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/0.0.1...0.0.2#diff)
 ______________
 
 ### 0.0.1
@@ -469,5 +469,5 @@ __Contributors__
 - mh-cbon
 
 Released by mh-cbon, Mon 11 Jul 2016 -
-[see the diff](https://github.com/mh-cbon/changelog/compare/c589337667f6d64f5b2b2165290c20b8b4e7b40b...0.0.1#diff)
+[see the diff](https://github.com/M0Rf30/changelog/compare/c589337667f6d64f5b2b2165290c20b8b4e7b40b...0.0.1#diff)
 ______________
