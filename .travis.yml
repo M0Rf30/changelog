@@ -1,28 +1,22 @@
-sudo: required
-
+dist: bionic
+os: linux
 services:
   - docker
 
 language: go
 go:
-  - 1.9
+  - 1.15.6
 
 env:
-  matrix:
+  jobs:
     - OKARCH=amd64 OSARCH=amd64
     - OKARCH=386 OSARCH=i386
   global:
     - VERSION=${TRAVIS_TAG}
     - GH_USER=${TRAVIS_REPO_SLUG%/*}
     - GH_APP=${TRAVIS_REPO_SLUG#*/}
-    - JFROG_CLI_OFFER_CONFIG=false
-    # bintray token
-    - secure: TdFc992spuVRvR5FqvOsbvUtLjWdg7I0r2eMEKItyk5VA0erJqEoTZ+LtrKFrurKQmKyGjMekgoNr/SbmU+hYn65NqWUlTUdqLlx5m8vIdKDCoTLMkkt5iPPGrs87iG3PNyJWdRwwvca3zuBTCSgMz84rPuJj3tb0XMdMwl5yWB//nBPWZPynDNkyGsNZttibqifMWIdXsRuRG91FJk3t7+k5hW8BzWZq7hHJBPtbTE4c/xlOF9WvXcrY5ZIjLvXY4IGA6tJYR5EolzhIN3zNeEpptKBz+pTzHU54oQvqVSE/llrDDwLOGyn0TIdLYV8DWSQeFQPGxjgwUTANLpIHDpD3xXLsL2UqtFceU9v0G5KvC+U9OgAnD21xwuHusBrjoTzBZQqWKVrTw67BZAOfVLrs+82VrzW49+ZM+r5WjlKA9tbi/Oay/sO1Wkh6TGa1g9Uq6vPDdWKIXTmA1q8amo6wt/aDEfhzFFPniAyxsL+tZKuEczGJga8AfCAB4hEFChrpWPaZhsceLhCHbWCAl0HzSKWn0W6G1SQF+5tLzd/YCZO/SGBH+0+sHghbLGBsBSQrlvabhu2DhGZIOSIR7Zsn6istWfSuxx7bTrZ4VXUY/9e+BtT8T6GKZHHSGhSJSiMoVhKW+zeK7y0+jPwyzEqOHabssMQP2bhDW2/uIM=
 
 before_install:
-  - sudo add-apt-repository 'deb https://dl.bintray.com/mh-cbon/deb unstable main'
-  - sudo apt-get -qq update
-  - sudo apt-get install --allow-unauthenticated changelog go-bin-deb fakeroot
   - mkdir -p ${GOPATH}/bin
   - cd ~
   - curl https://glide.sh/get | sh
@@ -38,33 +32,9 @@ script:
   - go test
 
 before_deploy:
-  - POOL=`echo ${GH_APP} | cut -c 1`
-  # create the deb package
   - cd $GOPATH/src/github.com/$TRAVIS_REPO_SLUG
   - mkdir -p build/$OSARCH
   - GOOS=linux go build --ldflags "-X main.VERSION=$VERSION" -o build/$OSARCH/$GH_APP main.go
-  - go-bin-deb generate --file deb.json -a $OSARCH --version $VERSION -o $GH_APP-$OSARCH-$VERSION.deb
-  # copy the deb for gh release (backward compatibility)
-  - cp $GH_APP-$OSARCH-$VERSION.deb $GH_APP-$OKARCH.deb
-  # upload to bintray
-  - curl -fL https://getcli.jfrog.io | sh
-  - ./jfrog bt pc --key=$BTKEY --user=$GH_USER --licenses=MIT --vcs-url=https://github.com/$GH_USER/deb $GH_USER/deb/$GH_APP || echo "package already exists"
-  - ./jfrog bt upload --override=true --key $BTKEY --publish=true --deb=unstable/main/$OSARCH $GH_APP-$OSARCH-$VERSION.deb $GH_USER/deb/$GH_APP/$VERSION pool/$POOL/$GH_APP/
-  # generate the repo metadata
-  - curl -X POST -u ${GH_USER}:${BTKEY} https://api.bintray.com/calc_metadata/${GH_USER}/deb
-  # prepare rpm package creation
-  - docker pull fedora
-  # create the package in the docker
-  - >
-    docker run -v $PWD:/mnt/travis fedora /bin/sh -c
-    "cd /mnt/travis && (curl -s -L https://bintray.com/mh-cbon/rpm/rpm > /etc/yum.repos.d/w.repo) && dnf install go-bin-rpm changelog rpm-build -y --quiet && go-bin-rpm generate --file rpm.json -a $OSARCH --version $VERSION -o $GH_APP-$OSARCH-$VERSION.rpm"
-  # copy the rpm for gh release (backward compatibility)
-  - cp $GH_APP-$OSARCH-$VERSION.rpm $GH_APP-$OKARCH.rpm
-  # upload to bintray
-  - ./jfrog bt pc --key=$BTKEY --user=$GH_USER --licenses=MIT --vcs-url=https://github.com/$GH_USER/rpm $GH_USER/rpm/$GH_APP || echo "package already exists"
-  - ./jfrog bt upload --override=true --key $BTKEY --publish=true $GH_APP-$OSARCH-$VERSION.rpm $GH_USER/rpm/$GH_APP/$VERSION pool/$POOL/$GH_APP/
-  # generate the repo metadata
-  - curl -X POST -u ${GH_USER}:${BTKEY} https://api.bintray.com/calc_metadata/${GH_USER}/rpm
 
 deploy:
   provider: releases
@@ -72,8 +42,7 @@ deploy:
     secure: J9oRiOHW2SYlBwk/Ekpgk1EzURG3jTtjlOZ6E/LFAkwQCxpjEQDA0xo5iZWyJb5H2E3g9LToIzUbAFxI5vItCpWXSt0BJCyH/yMlHli6IfdQHOSrqcjWyde9F/Y1Se+8heLdzQtxvsEIUqVjMLnQhQqxN6EfLx/UpVumWALQipFVgMD9dfDJSycRlRF4tL1sCSEMWjdCgyoUBPeIIPthtjkaHH2WynwpitWfwvshDZ2+lHvC+JfoSDPdY+EEe4h/tTcKd20zTZNcKTKBF9sDIMbb0kZIa16JYlp7QguJai4domPahKTPfsZDY6zkHNNMc1NSpO6bUvcYcIsgGHEYciiYUkBlEciFHLyGC6w0UbxXAd0MIK1nMQJ7XMeoz0km2YGWTPJlAn3n4gu9XHHqSPeiV+YUu09qf42L7gEQoYm+w0B14LKGCWoYCQHxuU0T68eOaexe/xnAtGDY0+g+nV4gUsHj6L0WyUNPeu+LnHdHzw2S3dWAltOKvtlBs40YSm1vXQInJwWWMAHyt8SVeMr5+GnyGtpLKg7/U5/tiSEDou8id0lHXxjFxOEzT+PY5mhgjM5UOmv4ekQSAuBZAlV1JYxq2kL/4feWGp1b4V3148wDskCFWSZf+jp0IbrA8qs9LwnhFJado6IGP3W2LlbuQigak5uJQw3SbahRd10=
   file_glob: true
   file:
-    - $GH_APP-$OKARCH.deb
-    - $GH_APP-$OKARCH.rpm
+    - build/$OSARCH/$GH_APP
   skip_cleanup: true
   on:
     tags: true
