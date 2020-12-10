@@ -23,7 +23,7 @@ import (
 )
 
 // VERSION contains the version string of the program
-var VERSION = "0.0.0"
+var VERSION = "0.1"
 var logger = verbose.Auto()
 var changelogFile = "change.log"
 var notAvailable = "N/A"
